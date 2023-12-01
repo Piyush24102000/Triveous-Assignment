@@ -7,6 +7,7 @@ const categoryRouter = require('./routes/categoryRoutes')
 const productRouter = require('./routes/productRoutes')
 const userRouter = require('./routes/userRoutes');
 const cartRouter = require('./routes/cartRoutes');
+const orderRouter = require('./routes/orderRoutes');
 
 
 // Apply rate limiter 
@@ -25,6 +26,7 @@ app.use('/api/category', categoryRouter)
 app.use('/api/product', productRouter)
 app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
+app.use('/api/order', orderRouter)
 
 /* Connection */
 mongoose.connect(process.env.MONGO_URI)
